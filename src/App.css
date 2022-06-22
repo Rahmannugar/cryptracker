@@ -12,9 +12,5 @@ a {
   color: #00bfff;
 }
 #crypt{
-  width: 100vw;
-  font-size: 12px;
-}
-img{
- Margin-left: -30px;
+  width: 100%;
 }
