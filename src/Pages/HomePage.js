@@ -1,21 +1,14 @@
 import React from "react";
 import Banner from "../components/Banner/Banner";
-import { Suspense } from "react";
-import { ErrorBoundary } from "react-error-boundary";
-import ErrorFallBack from "../components/ErrorBoundary";
-const CoinsTable = React.lazy(() => import("../components/CoinsTable"));
+import CoinsTable from "../components/CoinsTable";
 
-const HomePage = () => {
+const Homepage = () => {
   return (
-    <>
+   <div>
       <Banner />
-      <ErrorBoundary FallbackComponent={ErrorFallBack} onReset={()=>{}}>
-      <Suspense fallback={<div>Loading...</div>}>
       <CoinsTable />
-      </Suspense>
-      </ErrorBoundary>
-    </>
+    </div>
   );
 };
 
-export default HomePage;
+export default Homepage;
