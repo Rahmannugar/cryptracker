@@ -66,8 +66,8 @@ export default function CoinsTable() {
   const handleSearch = () => {
     return coins.filter(
       (coin) =>
-        coin.name.includes(search) ||
-        coin.symbol.includes(search)
+        coin.name.lowerCase().includes(search) ||
+        coin.symbol.lowerCase().includes(search)
     );
   };
 
